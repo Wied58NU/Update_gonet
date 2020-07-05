@@ -49,4 +49,5 @@
         block: |
           unalias ls
           set -o vi
+          alias pull_gonet=”ansible-pull -d /home/pi/pull -i 'localhost' -U https://github.com/Wied58/Update_gonet pull_gonet.yml"
    
