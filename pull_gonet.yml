@@ -1,6 +1,6 @@
 --- 
 - 
-  hosts: jeff_pis
+  hosts: all
   become: true
   become_method: sudo
   become_user: root
@@ -43,4 +43,10 @@
         mode: 0755
         recurse: yes
         
-        
+    - name: Update .bashrc
+      blockinfile: 
+        dest: "/home/pi/.bashrc"
+        block: |
+          unalias ls
+          set -o vi
+   
