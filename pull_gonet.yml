@@ -17,37 +17,37 @@
           name: python3-setuptools
           state: present
 
-     - name: Install pyserial with pip
-       pip:
-         name: pyserial
+      - name: Install pyserial with pip
+        pip:
+          name: pyserial
 
 
-     - name: Install Pillow with pip
-       pip:
-         name: Pillow
+      - name: Install Pillow with pip
+        pip:
+          name: Pillow
 
-     -  name: Get gonet3 repo from GitHub
+      - name: Get gonet3 repo from GitHub
         git: 
           dest: /home/pi/Tools/git_repo
           repo: "https://github.com/Wied58/gonet3.git"
           update: yes
           force: yes
 
-     - name: Change owership and permissions
-       file:
-          path: /home/pi/Tools/git_repo
-          state: directory
-          owner: pi 
-          group: pi
-          # when specifying mode using octal numbers, add a leading 0
-          mode: 0755
-          recurse: yes
+      - name: Change owership and permissions
+        file:
+           path: /home/pi/Tools/git_repo
+           state: directory
+           owner: pi 
+           group: pi
+           # when specifying mode using octal numbers, add a leading 0
+           mode: 0755
+           recurse: yes
         
-     - name: Update .bashrc
-       blockinfile: 
-          dest: "/home/pi/.bashrc"
-          block: |
-            unalias ls
-            set -o vi
-            alias pull_gonet=”ansible-pull -d /home/pi/pull -i 'localhost' -U https://github.com/Wied58/Update_gonet pull_gonet.yml"
+      - name: Update .bashrc
+        blockinfile: 
+           dest: "/home/pi/.bashrc"
+           block: |
+             unalias ls
+             set -o vi
+             alias pull_gonet=”ansible-pull -d /home/pi/pull -i 'localhost' -U https://github.com/Wied58/Update_gonet pull_gonet.yml"
    
