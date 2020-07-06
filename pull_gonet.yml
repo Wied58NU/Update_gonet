@@ -10,7 +10,11 @@
         apt:
           name: python3-pip 
           state: present
-
+      
+       - name: Install setuptools 2 
+         apt:
+           name: python-setuptools
+           state: present 
 
       - name: Ensure setuptools is installed 
         apt:
@@ -20,7 +24,6 @@
       - name: Install pyserial with pip
         pip:
           name: pyserial
-
 
       - name: Install Pillow with pip
         pip:
