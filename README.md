@@ -14,7 +14,7 @@ ansible-pull -d /home/pi/pull -i 'localhost,'  -U https://github.com/Wied58/Upda
 
 Dissecting the parameters:
 
--d  /home/pi/pull  - is the path on your machine where the GitHub will clone the repository will get cloned to. 
+-d  /home/pi/pull  - is the path on your machine where the GitHub the repository will get cloned to. 
 
 -i 'localhost,' -  tells Ansible that the cloned playbook will be executed here on the localmachine. Yes, The trailing comma is important!
 
