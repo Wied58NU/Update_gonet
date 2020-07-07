@@ -3,13 +3,11 @@ An Ansible Pull Playbook to clone the gonet repo and ensure all of the needed pa
 
 Tested on Raspberry Pi Zero with Buster-lite
 
-Updated and upgraded
-sudo apt-get update  -y &&  sudo apt-get upgrade  -y
+Updated and upgraded: sudo apt-get update  -y &&  sudo apt-get upgrade  -y
 
-With Ansible and Git Installed
-sudo apt-get install ansible git -y
+With Ansible and Git Installed: sudo apt-get install ansible git -y
 
-To run the ansible-pull command
+To run the ansible-pull command: 
 ansible-pull -d /home/pi/pull -i 'localhost,'  -U https://github.com/Wied58/Update_gonet pull_gonet.yml
 
 Dissecting the parameters:
