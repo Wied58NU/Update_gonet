@@ -32,7 +32,7 @@
           name: Pillow
           executable: pip3
           
-      - name: Ensure Pillow is installed with pip 3
+      - name: Ensure picamera is installed with pip 3
         pip:
           name: picamera
           executable: pip3
