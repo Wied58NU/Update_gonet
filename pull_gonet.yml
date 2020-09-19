@@ -36,6 +36,11 @@
         pip:
           name: picamera
           executable: pip3
+          
+     - name: Ensure fraction is installed with pip 3
+        pip:
+          name: fraction
+          executable: pip3
 
       - name: Get gonet3 repo from GitHub
         git: 
